@@ -50,5 +50,3 @@ public class ServicoController {
     }
 
 }
-© 2021 GitHub, Inc.
-        Terms

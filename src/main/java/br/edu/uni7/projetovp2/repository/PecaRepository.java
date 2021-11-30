@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PecaRepository extends JpaRepository<Peca, Integer> {
+public interface PecaRepository extends JpaRepository <Peca, Integer> {
 
     List<Peca> findAllByFabricanteAndQuantidadeGreaterThan(String fabricante, Integer quantidade);
 

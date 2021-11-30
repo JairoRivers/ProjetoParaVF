@@ -1,5 +1,4 @@
 package br.edu.uni7.projetovp2.model;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -44,4 +43,5 @@ public class NotaFiscal {
         this.cpfDoCliente = cpfDoCliente;
     }
 }
+
 
