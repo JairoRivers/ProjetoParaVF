@@ -1,7 +1,6 @@
 package br.edu.uni7.projetovp2.controllerVF;
 
 import br.edu.uni7.projetovp2.modelVF.Compras;
-import br.edu.uni7.projetovp2.modelVF.Produto;
 import br.edu.uni7.projetovp2.service.ComprasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +25,18 @@ public class ComprasController {
     @RequestMapping(value = "compras/{id}", method = RequestMethod.GET)
     public Compras findById(@PathVariable String id) {
         return service.findById(id);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "compras/{cpf}", method = RequestMethod.GET)
+    public List <Compras> findByCPF (@PathVariable int cpf) {
+        return service.findByCPF(cpf);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "compras/{chaveNT}", method = RequestMethod.GET)
+    public List <Compras> findByNT (@PathVariable String chaveNT) {
+        return service.findByNT(chaveNT);
     }
 
     @ResponseBody

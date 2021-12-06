@@ -12,7 +12,7 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String nome;
-    private String data;
+    private String marca;
     private Integer quantidade;
     private Double preco;
     private String categoria;
@@ -34,12 +34,12 @@ public class Produto {
         this.nome = nome;
     }
 
-    public String getData() {
-        return data;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public Integer getQuantidade() {

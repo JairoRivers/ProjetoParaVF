@@ -43,7 +43,7 @@ public class ProdutoController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "produto/categoria/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "produto/categoria/{categoria}", method = RequestMethod.GET)
     public List<Produto> findByCategoria(@PathVariable String categoria) {
         return service.findByCategoria(categoria);
     }

@@ -13,12 +13,10 @@ import java.util.List;
 public class ProdutoService {
 
     private final ProdutoRepository produtoRepository;
-    private final ComprasRepository registroComprasRepository;
 
     @Autowired
-    public ProdutoService (ProdutoRepository produtoRepository, ComprasRepository registroComprasRepository){
+    public ProdutoService (ProdutoRepository produtoRepository){
         this.produtoRepository = produtoRepository;
-        this.registroComprasRepository = registroComprasRepository;
     }
 
     public List<Produto> list() {
@@ -48,10 +46,6 @@ public class ProdutoService {
 
     public Produto create (Produto produto){
         produtoRepository.save(produto);
-
-        Compras registroCompras = new Compras();
-        registroComprasRepository.save(registroCompras);
-
         return produto;
     }
 

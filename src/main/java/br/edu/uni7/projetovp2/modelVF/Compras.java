@@ -9,19 +9,19 @@ import java.util.List;
 public class Compras {
 
     @Id
-    private String chave;
+    private String chaveNT;
     private int cpfCliente;
 
     @OneToMany
     private List<Produto> produtos;
     private Double valorCompra;
 
-    public String getChave() {
-        return chave;
+    public String getChaveNT() {
+        return chaveNT;
     }
 
-    public void setChave(String chave) {
-        this.chave = chave;
+    public void setChaveNT(String chave) {
+        this.chaveNT = chave;
     }
 
     public List<Produto> getProdutos() {
